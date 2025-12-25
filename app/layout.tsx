@@ -10,8 +10,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Food-Stat | AI-Powered Nutrition Intelligence",
-  description: "Explainable, context-aware nutrition intelligence powered by AI. Understand your food with expert-level analysis.",
+  title: "Speedwagon | Accelerating Innovation",
+  description: "Speedwagon is a technology incubator building the future of nutrition, productivity, and AI solutions.",
 };
 
 export default function RootLayout({

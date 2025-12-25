@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, Leaf } from "lucide-react";
+import { Menu, X, Rocket, ChevronDown } from "lucide-react";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -12,27 +12,34 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16 items-center">
                     <div className="flex-shrink-0 flex items-center gap-2">
-                        <Leaf className="h-8 w-8 text-teal-600" />
+                        <Rocket className="h-8 w-8 text-indigo-600" />
                         <span className="font-bold text-xl tracking-tight text-gray-900">
-                            Food-Stat
+                            Speedwagon
                         </span>
                     </div>
 
                     <div className="hidden md:flex space-x-8">
-                        <Link href="/" className="text-gray-600 hover:text-teal-600 transition-colors">
+                        <Link href="/" className="text-gray-600 hover:text-indigo-600 transition-colors">
                             Home
                         </Link>
-                        <Link href="/about" className="text-gray-600 hover:text-teal-600 transition-colors">
+                        <div className="relative group">
+                            <button className="flex items-center text-gray-600 hover:text-indigo-600 transition-colors">
+                                Products <ChevronDown className="h-4 w-4 ml-1" />
+                            </button>
+                            <div className="absolute top-full left-0 w-48 bg-white border border-gray-100 shadow-lg rounded-xl p-2 hidden group-hover:block">
+                                <Link href="/food-stat" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg">
+                                    Food-Stat
+                                </Link>
+                            </div>
+                        </div>
+                        <Link href="/about" className="text-gray-600 hover:text-indigo-600 transition-colors">
                             About
-                        </Link>
-                        <Link href="/features" className="text-gray-600 hover:text-teal-600 transition-colors">
-                            Features
                         </Link>
                     </div>
 
                     <div className="hidden md:flex">
-                        <button className="bg-teal-600 text-white px-4 py-2 rounded-full font-medium hover:bg-teal-700 transition-colors">
-                            Get Started
+                        <button className="bg-indigo-600 text-white px-4 py-2 rounded-full font-medium hover:bg-indigo-700 transition-colors">
+                            Contact Us
                         </button>
                     </div>
 
@@ -53,28 +60,28 @@ export default function Navbar() {
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                         <Link
                             href="/"
-                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
+                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
                             onClick={() => setIsOpen(false)}
                         >
                             Home
                         </Link>
                         <Link
+                            href="/food-stat"
+                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+                            onClick={() => setIsOpen(false)}
+                        >
+                            Product: Food-Stat
+                        </Link>
+                        <Link
                             href="/about"
-                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
+                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
                             onClick={() => setIsOpen(false)}
                         >
                             About
                         </Link>
-                        <Link
-                            href="/features"
-                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
-                            onClick={() => setIsOpen(false)}
-                        >
-                            Features
-                        </Link>
                         <div className="pt-4 pb-2">
-                            <button className="w-full bg-teal-600 text-white px-4 py-2 rounded-full font-medium hover:bg-teal-700 transition-colors">
-                                Get Started
+                            <button className="w-full bg-indigo-600 text-white px-4 py-2 rounded-full font-medium hover:bg-indigo-700 transition-colors">
+                                Contact Us
                             </button>
                         </div>
                     </div>

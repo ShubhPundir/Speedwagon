@@ -1,4 +1,4 @@
-import CTASection from "@/components/CTASection";
+import FoodStatCTA from "@/components/FoodStatCTA";
 import FeatureCard from "@/components/FeatureCard";
 import { Search, BrainCircuit, Target, MessageCircle, Database, ShieldCheck } from "lucide-react";
 
@@ -87,7 +87,7 @@ export default function Features() {
 
             </div>
 
-            <CTASection />
+            <FoodStatCTA />
         </div>
     );
 }
